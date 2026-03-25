@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import FilteredProductList from './Products'
-import Home from './Home';
+import FilteredProductList from './Components/Products'
+import Home from './Components/Home';
 
 function App() {
   return (
@@ -13,5 +13,4 @@ function App() {
       </BrowserRouter>
   )
 }
-
 export default App;

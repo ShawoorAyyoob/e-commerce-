@@ -52,7 +52,6 @@ function Home() {
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
-              <span className="cart-badge">3</span>
             </button>
             <Link to="/products-search" className="btn-primary-nav">
               Shop Now
@@ -110,34 +109,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-card hero-card-1">
-            <div className="hcard-img-wrap">
-              <img
-                src="https://dummyjson.com/image/400x300/1a1a2e/c8a96e?text=Featured"
-                alt="Featured"
-              />
-            </div>
-            <div className="hcard-body">
-              <span className="hcard-tag">Trending</span>
-              <p className="hcard-title">Premium Collection</p>
-              <p className="hcard-price">From $29.99</p>
-            </div>
-          </div>
-          <div className="hero-card hero-card-2">
-            <div className="hcard-img-wrap">
-              <img
-                src="https://dummyjson.com/image/400x300/1a1a2e/c8a96e?text=Sale"
-                alt="Sale"
-              />
-            </div>
-            <div className="hcard-body">
-              <span className="hcard-tag sale">Sale</span>
-              <p className="hcard-title">Top Deals</p>
-              <p className="hcard-price">Up to 40% off</p>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section className="categories">
@@ -155,7 +126,6 @@ function Home() {
               { icon: "🏠", name: "Home & Living", count: "210+" },
               { icon: "💄", name: "Beauty", count: "95+" },
               { icon: "🏋️", name: "Sports", count: "180+" },
-              { icon: "📚", name: "Books", count: "500+" },
             ].map((cat) => (
               <Link to="/products-search" className="cat-card" key={cat.name}>
                 <span className="cat-icon">{cat.icon}</span>
@@ -170,7 +140,7 @@ function Home() {
       <section className="features" id="features">
         <div className="section-inner">
           <div className="section-header centered">
-            <span className="section-eyebrow">Why LuxeMart</span>
+            <span className="section-eyebrow">Why SkPoint</span>
             <h2 className="section-title">Shopping, Elevated</h2>
             <p className="section-desc">
               We combine the best products with an exceptional experience — from
@@ -293,9 +263,8 @@ function Home() {
             <p className="footer-tagline">Premium shopping, made simple.</p>
           </div>
         </div>
-
         <div className="footer-bottom">
-          <span>© 2025 LuxeMart. All rights reserved.</span>
+          <span>© 2025 SkPoint. All rights reserved.</span>
         </div>
       </footer>
     </div>
