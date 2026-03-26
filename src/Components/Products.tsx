@@ -17,7 +17,7 @@ function ProductList() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [loading, setLoading] = useState(true);
   const [addedIds, setAddedIds] = useState<Set<number>>(new Set());
-  const { cart, addToCart } = useCart();
+  const { addToCart } = useCart();
 
   const fetchProducts = async () => {
     const response = await fetch("https://dummyjson.com/products?limit=100");
