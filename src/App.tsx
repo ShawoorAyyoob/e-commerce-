@@ -1,15 +1,20 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import FilteredProductList from './Components/Products'
+import ProductList from './Components/Products'
 import Home from './Components/Home';
+import { CartProvider } from './Context/CartContetxt';
+import Cart from './Components/Cart';
 
 function App() {
   return (
     <BrowserRouter>
+    <CartProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products-search" element={<FilteredProductList />}></Route>
+        <Route path="/products-search" element={<ProductList />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
+      </CartProvider>
       </BrowserRouter>
   )
 }

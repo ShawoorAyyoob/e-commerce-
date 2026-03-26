@@ -2,16 +2,21 @@ import { useCart } from "../Context/CartContetxt";
 import { Link } from "react-router-dom";
 
 function Cart() {
-  const { cart } = useCart();
+  const { cart, clearCart } = useCart();
 
   const total = cart.reduce(
-    (total, item) => total + item.price * item.quantity, 0);
+    (total, item) => total + item.price * item.quantity,
+    0,
+  );
 
-  if (cart.length == 0) return;
-  <div className="alert alert-info mt-4">
-    🛒 Your cart is empty. Explore Products.
-  </div>;
-return(
+  if (cart.length === 0) {
+    return (
+      <div className="container mt-4 alert alert-info mt-4">
+        🛒 Your cart is empty. Explore Products.
+      </div>
+    );
+  }
+  return (
     <div className="container mt-4">
       <h3>Your Cart</h3>
       <ul className="list-group mb-3">
@@ -32,5 +37,6 @@ return(
         Proceed to Address
       </Link>
     </div>
-)}
+  );
+}
 export default Cart;
