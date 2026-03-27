@@ -7,7 +7,7 @@ import Cart from './Components/Cart';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/e-commerce">
     <CartProvider>
       <Routes>
         <Route path="/" element={<Home />} />
